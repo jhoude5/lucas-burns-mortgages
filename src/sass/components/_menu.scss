@@ -1,0 +1,17 @@
+.bm-burger-button {
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}
+.nav-menu {
+    flex-direction: row-reverse;
+    .nav-link {
+        color: $solid-blue;
+        font-size: 20px;
+        &:hover, 
+        &:focus {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+}

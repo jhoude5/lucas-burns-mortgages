@@ -1,0 +1,26 @@
+footer {
+    margin-top: 75px;
+    .footer-martel-logo {
+        max-width: 125px;
+    }
+    .footer-bottom {
+        position: relative;
+        .social-icons {
+            position: absolute;
+            bottom: 20px;
+            right: 80px;
+            display: flex;
+            img {
+                width: 100%;
+                max-width: 50px;
+                margin-left: 10px;
+            }
+        }
+        .copyright {
+            margin-top: 150px;
+        }
+    }
+    
+    
+    
+}

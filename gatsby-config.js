@@ -16,8 +16,27 @@ module.exports = {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
-      "path": "./src/images/"
+      "path": "./src/files/"
     },
     __key: "images"
-  }]
+  },
+  {
+    resolve: `gatsby-plugin-google-fonts`,
+    options: {
+      fonts: [
+        `didot`, `lato`, `licorice`, `koh santepheap`
+      ],
+      display: 'swap'
+    }
+  },
+  {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: `Lucas Burns Mortgages`,
+      short_name: `LB`,
+      start_url: `/`,
+      icon: 'src/favicon.png',
+    },
+  }
+]
 };

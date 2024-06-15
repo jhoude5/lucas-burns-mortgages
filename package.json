@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "lucas-burns-mortgages",
-  "author": "Jennifer Aube",
+  "author": "Jennifer Houde",
   "keywords": [
     "gatsby"
   ],
@@ -15,15 +15,22 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
     "gatsby": "^5.13.5",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-sass": "^6.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-source-contentful": "^8.13.2",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
+    "mortgage-calculator-react": "^0.1.3",
     "react": "^18.2.0",
+    "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",
-    "sass": "^1.77.4"
+    "sass": "^1.77.4",
+    "vanilla-back-to-top": "^7.2.1"
   }
 }

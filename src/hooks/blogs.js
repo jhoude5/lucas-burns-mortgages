@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { graphql, useStaticQuery } from 'gatsby';
 
 const BlogHook = () => {
@@ -17,6 +17,9 @@ const BlogHook = () => {
                     raw
                   }
                   date
+                  shortDescription {
+                    raw
+                  }
                 }
               }
         }

@@ -1,7 +1,7 @@
 import * as React from "react"
 import Header from '../components/header';
 import '../sass/styles.scss';
-import MartelImage from '../files/MartelImage.jpeg';
+import MartelImage from '../files/martelimage.jpeg';
 import Services from '../components/services';
 import ApplyNow from "../components/applynow";
 import MortgageCalc from "../components/mortgagecalc";
@@ -11,7 +11,7 @@ import About from "../components/about";
 import Contact from "../components/contact";
 import Testimonials from "../components/testimonials";
 import Blog from "../components/blog";
-import LucasBurns from '../files/LucasBurns.png';
+import LucasBurns from '../files/lucasburns.png';
 import { addBackToTop } from 'vanilla-back-to-top';
 
 

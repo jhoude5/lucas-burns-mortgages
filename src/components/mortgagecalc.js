@@ -14,7 +14,7 @@ const MortgageCalc = () => {
                     <MortgageCalculator/>
                     
                 </div>
-                <p>*Numbers may not be accurate if using less than 20% down payment. Contact me for details.</p>
+                <p className="calc-info col-lg-6">*Numbers may not be accurate if using less than 20% down payment. Contact me for details.</p>
             </div>  
         </div>
     );

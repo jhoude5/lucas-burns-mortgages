@@ -2,7 +2,8 @@ import React from "react";
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types';
-import TestimonialsHook from "../hooks/testimonials";
+import TestimonialsHook from "../hooks/testimonialhomepage";
+import rightarrow from '../files/rightarrow.png';
 
 const Testimonials = () => {
     const testimonialHook = TestimonialsHook();
@@ -28,28 +29,28 @@ const Testimonials = () => {
     return (
 
         <div className="container">
-        <div className="row">
-            <h2>Testimonials</h2>
+        <div className="row g-2">
+            <h2 className="center">Testimonials</h2>
             {testimonialHook.map((item, index)  => {
                   return (
-                      <div className="teaser-grid--wrapper col-lg-4" id={index}>
-                        <div className="teaser-grid">
-                            <div className="teaser-grid__name teaser__link">
-                            <a href='/testimonials'>
+                      <div className="testimonial--wrapper col card" id={index}>
+                        <div className="testimonial-grid">
+                            
                                 <div className="teaser-grid__image">
                                   <GatsbyImage image={getImage(item.image.gatsbyImageData)} alt={''} />
                                 </div>
-                                <div className="teaser-grid__description">{renderRichText(item.shortDescription, options)}</div>
-                                <div className="teaser-grid__title">{item.name}</div>
-                                
-                            </a>
+                                <div className="testimonial-grid__description">{renderRichText(item.shortDescription, options)}</div>
+                                <div className="testimonial-grid__title">{item.name}</div>
+                                <a className="testimonial_link" href='/testimonials'> Read full testimonial </a>
                             
-                            </div>
                         </div>
                       </div>
                   );
                 })
               }
+              <a href='/testimonials' className="see-all-link">See all testimonials
+                <img src={rightarrow} alt="" />
+              </a>
         </div>
       </div>
     );

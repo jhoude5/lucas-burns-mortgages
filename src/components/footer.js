@@ -1,5 +1,5 @@
 import React from "react";
-import martelLogo from '../files/martelLogo.jpeg';
+import martelLogo from '../files/martellogo.jpeg';
 import facebooklogo from '../files/facebook.svg';
 import linkedinlogo from '../files/linkedin.svg';
 import instagramlogo from '../files/instagram.svg';

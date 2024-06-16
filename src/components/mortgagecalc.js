@@ -10,10 +10,11 @@ const MortgageCalc = () => {
                 <div className="col-lg-6">
                     <h2>Mortgage Payment Calculator</h2>
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 calc">
                     <MortgageCalculator/>
-                    <p>*Numbers may not be accurate if using less than 20% down payment. Contact me for details.</p>
+                    
                 </div>
+                <p>*Numbers may not be accurate if using less than 20% down payment. Contact me for details.</p>
             </div>  
         </div>
     );

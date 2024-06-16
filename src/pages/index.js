@@ -24,12 +24,10 @@ const IndexPage = () => {
           <Header />
           <div className="header-title-img container">
             <div className="row">
-              <div className="col-lg-8">
-                <h1>Providing services in <span className="header-bold">Ottawa</span> and throughout <span className="header-bold">Ontario</span></h1>
-              </div>
-              <div className="col-lg-4">
+                <h1 className="header-title">Providing services in <span className="header-bold">Ottawa</span> and throughout <span className="header-bold">Ontario</span></h1>
+              
                 <img className='lucas-burns-header-img' src={LucasBurns} alt='Lucas Burns' />
-              </div>
+              
             </div>
             
             
@@ -37,7 +35,7 @@ const IndexPage = () => {
           <div>
             <img className='martel-header-img' src={MartelImage} alt=''/>
           </div>
-          <section id='services' className="services">
+          <section id='services' className="services center">
             <Services />
           </section>
           <section id='apply' className="applynow">

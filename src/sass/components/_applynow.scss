@@ -1,4 +1,11 @@
 .applynow {
     padding: 100px 0;
     background-color: $baby-blue;
+    .apply {
+        max-width: 908px;
+        margin: 0 auto;
+    }
+    .btn-primary {
+        margin-top: 60px;
+    }
 }

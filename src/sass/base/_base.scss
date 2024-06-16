@@ -2,7 +2,13 @@
 
 h1 {
     @media(min-width: 1200px ) {
-        font-size: 96px;
+        font-size: 64px;
+    }
+    
+}
+h2 {
+    @media(min-width: 1200px ) {
+        font-size: 48px;
     }
     
 }
@@ -13,11 +19,28 @@ h1, h2, h3, h4, h5, h6 {
 p {
     font-family: lato;
     color: $black;
+    @media(min-width: 1200px ) {
+        font-size: 24px;
+    }
 }
 .visually-hidden {
     visibility: hidden;
 }
 #back-to-top {
     left: 200px;
+    bottom: 300px;
     background-color: $solid-blue;
+}
+.center {
+    text-align: center;
+}
+section {
+    padding: 100px 0;
+}
+.btn-primary {
+    background-color: $solid-blue;
+    color: $white;
+    border-radius: 15px;
+    padding: 15px 36px;
+    font-size: 20px;
 }

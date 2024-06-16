@@ -33,7 +33,7 @@ const Contact = () => {
       
         <div className='container'>
             <div className='row'>
-            <h2>Contact Us</h2>
+            <h2 className='center'>Contact Us</h2>
       <form className='contact-us-form' name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field"
                                 onSubmit={handleSubmit} id="contact-form">
                                 <input type="hidden" name="form-name" value="contact" />
@@ -81,7 +81,7 @@ const Contact = () => {
                                     </div>
 
                                     <div className="form-group form-button">
-                                        <button className="theme-btn btn-style-one" type="submit">
+                                        <button className="theme-btn btn-primary" type="submit">
                                             SUBMIT
                                         </button>
                                     </div>

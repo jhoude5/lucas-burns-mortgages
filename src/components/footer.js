@@ -19,16 +19,16 @@ const Footer = () => {
                             <img className='footer-martel-logo' src={martelLogo} alt='martel logo'/>
                         </a>
                     </div>
-                    <div className="col-lg-4">
+                    <div className="center col-lg-4">
                         <h3>Head Office</h3>
-                        <p>Martel Mortgages<br/>
+                        <p className="martel-info">Martel Mortgages<br/>
                             FSCO # 13015<br/>
                             Building B3101 County Road 29<br/>
                             Brockville, ON K6V 5T4<br/>
                             1.855.320.2464 ext 118</p>
                         
                     </div>
-                    <div className="col-lg-4">
+                    <div className="center col-lg-4">
                         <h3>Telephone</h3>
                         <a href='tel:613-298-1522'>(613) 298-1522</a>
                         <h3>Email</h3>

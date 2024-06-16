@@ -4,9 +4,11 @@ import '../sass/styles.scss';
 import ApplyNow from "../components/applynow";
 import Footer from "../components/footer";
 import Newsletter from '../components/newsletter';
+import { addBackToTop } from 'vanilla-back-to-top';
 
 
 const Mortgages = () => {
+    addBackToTop();
   return (
     <div> 
         <main>

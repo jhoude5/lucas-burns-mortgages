@@ -12,8 +12,8 @@ const Header = () => {
         <header>
             <div className="book-now">
                 <div className="container">
-                        <p>Get Started</p>
-                        <a className="btn btn-secondary" href='https://calendly.com/lucasburns-mortgage-agent/phone-call'>Book an Appointment</a>
+                    <p>Get Started</p>
+                    <a className="btn btn-secondary btn-header" href='https://calendly.com/lucasburns-mortgage-agent/phone-call'>Book an Appointment</a>
                     
                 </div>
                 </div>

@@ -1,3 +1,13 @@
 .subscribe {
     background-color: $blue;
+    .contact-us-form {
+        display: flex;
+        input {
+            width: 100%;
+        }
+        .email-input {
+            width: 100%;
+            margin-right: 10px;
+        }
+    }
 }

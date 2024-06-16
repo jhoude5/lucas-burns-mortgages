@@ -1,0 +1,32 @@
+.testimonials {
+    .testimonial--wrapper {
+        background-color: $baby-blue;
+        opacity: 70%;
+        position: relative;
+        margin-bottom: 80px;
+        .testimonial__image {
+            position: absolute;
+            top: 33px;
+    left: -100px;
+            img {
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: 100%;
+            }
+
+        }
+        .teaser-grid__description p {
+            font-size: 18px;
+            max-width: 986px;
+            margin: 80px auto 40px;
+        }
+        .teaser-grid__title {
+            text-align: end;
+            max-width: 986px;
+            margin: 40px auto;
+            font-size: 24px;
+            font-weight: bold;
+            color: $black;
+        }
+    }
+}

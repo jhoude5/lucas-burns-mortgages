@@ -26,14 +26,14 @@ const Newsletter = () => {
             <div className="col-lg-6">
              <h2>Subscribe to my newsletter</h2>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6 entry-form">
             <form className='contact-us-form' name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field"
                                 onSubmit={handleSubmit} id="contact-form">
                                 <input type="hidden" name="form-name" value="contact" />
                                 <input type="hidden" name="bot-field" />
                                 
 
-                                    <div className="form-group">
+                                    <div className="form-group email-input">
                                         <label className='col-lg-1 visually-hidden'>Email</label>
                                         <input className='col-lg-11' type="email"
                                             name="email"
@@ -45,7 +45,7 @@ const Newsletter = () => {
                                    
 
                                     <div className="form-group form-button">
-                                        <button className="theme-btn btn-style-one" type="submit">
+                                        <button className="theme-btn btn-primary" type="submit">
                                             Subscribe
                                         </button>
                                     </div>

@@ -8,7 +8,7 @@ import { addBackToTop } from 'vanilla-back-to-top';
 
 
 const Mortgages = () => {
-    addBackToTop();
+    // addBackToTop();
   return (
     <div> 
         <main>

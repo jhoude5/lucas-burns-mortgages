@@ -12,7 +12,7 @@ import BlogHook from "../hooks/blogs";
 
 
 const Blogs = () => {
-    addBackToTop();
+    // addBackToTop();
     const blogHook = BlogHook();
     const options = {
     

@@ -13,7 +13,7 @@ import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types';
 
 
 const Testimonials = () => {
-    addBackToTop();
+    // addBackToTop();
     const testimonialHook = TestimonialsHook();
     console.log(testimonialHook);
     

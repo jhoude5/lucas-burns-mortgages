@@ -20,7 +20,7 @@ const MainMenu = () => {
             <ul className='navbar-nav'>
             
                 <li className='nav-item'><Link className='nav-link' to='#contact'>Contact</Link></li>
-                <li className='nav-item'><Link className='nav-link' to='/blog'>Blogs</Link></li>
+                <li className='nav-item'><Link className='nav-link' to='/blogs'>Blogs</Link></li>
                 <li className='nav-item'><Link className='nav-link' to='#apply'>Apply Now</Link></li>
                 <li className='nav-item'><Link className='nav-link' to='/testimonials'>Testimonials</Link></li>
                 

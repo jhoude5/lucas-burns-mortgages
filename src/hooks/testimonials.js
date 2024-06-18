@@ -9,6 +9,8 @@ const TestimonialsHook = () => {
                 nodes {
                     image {
                         gatsbyImageData
+                        
+                        
                     }
                     name
                     testimonial {

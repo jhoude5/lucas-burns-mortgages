@@ -9,7 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
         blogs: allContentfulBlogs {
             edges {
                 node {
-                    id
+                    path
                 }    
             }
         }
@@ -19,12 +19,11 @@ exports.createPages = async ({ graphql, actions }) => {
         throw result.errors;
     }
     const blogsData = result.data.blogs.edges;
-    const BlogsTemplate = path.resolve('./src/templates/blog.js');
-
-    blogsData.forEach(({ node }, index) => {
+    const BlogsTemplate = require.resolve('./src/templates/blog.js');
+    blogsData.forEach(( node , index) => {
 
         createPage({
-          path: `${node.path}`,
+          path: `${node.node.path}`,
           component: BlogsTemplate,
           // values in the context object are passed in as variables to page queries
           context: {
@@ -41,4 +40,22 @@ exports.createPages = async ({ graphql, actions }) => {
             component: path.resolve('src/templates/blog.js')
         })
 }
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+    if (stage === "build-html" || stage === "develop-html") {
+      actions.setWebpackConfig({
+        module: {
+          rules: [
+            {
+              test: /mortgage-calculator-react/,
+              use: loaders.null(),
+            },
+            {
+                test: /vanilla-back-to-top/,
+                use: loaders.null(),
+            }
+          ],
+        },
+      })
+    }
+  }
 

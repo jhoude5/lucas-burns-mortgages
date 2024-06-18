@@ -17,6 +17,7 @@ import { addBackToTop } from 'vanilla-back-to-top';
 
 const IndexPage = () => {
   // addBackToTop();
+  
 
   return (
     <div> 

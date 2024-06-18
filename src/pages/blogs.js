@@ -1,4 +1,5 @@
 import * as React from "react"
+import { graphql, useStaticQuery } from 'gatsby';
 import Header from '../components/header';
 import '../sass/styles.scss';
 import ApplyNow from "../components/applynow";
@@ -8,12 +9,34 @@ import { addBackToTop } from 'vanilla-back-to-top';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types';
-import BlogHook from "../hooks/blogs";
+import Pagination from "../components/pagination.js";
 
 
-const Blogs = () => {
+
+const Blogs = ({pageContext}) => {
     // addBackToTop();
-    const blogHook = BlogHook();
+    const richTextImages = {};
+    const data = useStaticQuery(graphql`
+    query BlogQuery {
+      allContentfulBlogs {
+          nodes {
+            path
+            mainImage {
+              gatsbyImageData
+            }
+            blogTitle
+            blogInfo {
+              raw
+            }
+            date
+            shortDescription {
+              raw
+            }
+          }
+        }
+  }
+  `)
+  const blogs = data.allContentfulBlogs.nodes;
     const options = {
     
     renderMark: {
@@ -29,8 +52,13 @@ const Blogs = () => {
           </a>
         )
       },
-    }
+      [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
+        // render the EMBEDDED_ASSET as you need
+        const imageData = richTextImages[node.data.target.sys.id];
+        const image = getImage(imageData.image)
+    },
   }
+}
   return (
     <div> 
         <main>
@@ -42,7 +70,7 @@ const Blogs = () => {
           <section id='apply' className="applynow">
             <ApplyNow />
           </section>
-          {blogHook.map((item, index)  => {
+          {blogs.map((item, index)  => {
                   return (
                       <div className="teaser-grid--wrapper col-lg-4" id={index}>
                         <div className="teaser-grid">
@@ -61,7 +89,7 @@ const Blogs = () => {
                   );
                 })
               }
-          
+          <Pagination pageContext={pageContext} />
           <section className="subscribe">
             <Newsletter />
           </section>

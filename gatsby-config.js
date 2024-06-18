@@ -2,6 +2,9 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  flags: {
+    DEV_SSR: true
+  },
   siteMetadata: {
     title: `LucasBurnsMortgages`,
     siteUrl: `https://www.yourdomain.tld`
@@ -10,7 +13,8 @@ module.exports = {
     resolve: 'gatsby-source-contentful',
     options: {
       "accessToken": "TLwL9qWkNhRZLUYf2PlHzd9PamgCq6lH-ieZBMHBrME",
-      "spaceId": "3uk34yq9t6vg"
+      "spaceId": "3uk34yq9t6vg",
+    downloadLocal: true,
     }
   }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sass", {
     resolve: 'gatsby-source-filesystem',
@@ -19,6 +23,12 @@ module.exports = {
       "path": "./src/files/"
     },
     __key: "images"
+  },
+  {
+    resolve: `gatsby-remark-images-contentful`,
+    options: {
+      maxWidth: 590,
+    },
   },
   {
     resolve: `gatsby-plugin-google-fonts`,

@@ -1,11 +1,11 @@
 import * as React from "react"
+import { graphql, useStaticQuery } from 'gatsby';
 import Header from '../components/header';
 import '../sass/styles.scss';
 import ApplyNow from "../components/applynow";
 import Footer from "../components/footer";
 import Newsletter from '../components/newsletter';
 import { addBackToTop } from 'vanilla-back-to-top';
-import TestimonialsHook from "../hooks/testimonials";
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types';
@@ -14,8 +14,28 @@ import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types';
 
 const Testimonials = () => {
     // addBackToTop();
-    const testimonialHook = TestimonialsHook();
-    console.log(testimonialHook);
+    const data = useStaticQuery(graphql`
+    query StaticQuery {
+        allContentfulTestimonials {
+            nodes {
+                image {
+                    gatsbyImageData
+                    
+                    
+                }
+                name
+                testimonial {
+                    raw
+                }
+                shortDescription {
+                    raw
+                }
+            }
+          }
+    }
+  `)
+  const testimonials = data.allContentfulTestimonials.nodes;
+
     
      const options = {
        
@@ -48,7 +68,7 @@ const Testimonials = () => {
           <section className="testimonials">
             <div className="container">
                 <div className="row">
-                {testimonialHook.map((item, index)  => {
+                {testimonials.map((item, index)  => {
                   return (
                       <div className="testimonial--wrapper" id={index}>
                         <div className="testimonial-grid">
